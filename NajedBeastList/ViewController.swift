@@ -25,11 +25,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
     }
 
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
     // How many cells are we going to need?
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,6 +43,13 @@ extension ViewController: UITableViewDataSource {
         cell.textLabel?.text = tasks[indexPath.row]
         return cell
     }
+    
+    // What we write here will be implemented as soon as one of the table view cells are tapped
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tasks.remove(at: indexPath.row)
+        tableView.reloadData()
+    }
+
 
 }
 
