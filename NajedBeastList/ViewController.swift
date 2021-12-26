@@ -7,7 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, BeastCellDelegate {
+    
+    func showTaskDescription(description: String) {
+        textLabel.text = description
+    }
+    
 
     // Create this array at the top of your class as a property
     var tasks = ["Exercise for 30 minutes", "Wireframe for some project", "Do laundry"]
@@ -20,12 +25,14 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        textLabel.text = ""
     }
 
 }
@@ -39,8 +46,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
     // How should I create each cell?
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! CustomCell
         cell.textLabel?.text = tasks[indexPath.row]
+        cell.delegate = self
         return cell
     }
     

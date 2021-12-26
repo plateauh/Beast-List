@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5B4D13E2778A28A00340F80 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B4D13D2778A28A00340F80 /* CustomCell.swift */; };
+		B5B4D1402778A87000340F80 /* BeastCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B4D13F2778A87000340F80 /* BeastCellDelegate.swift */; };
 		B5C8BF2E2777AAFD002F86EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C8BF2D2777AAFD002F86EC /* AppDelegate.swift */; };
 		B5C8BF302777AAFD002F86EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C8BF2F2777AAFD002F86EC /* SceneDelegate.swift */; };
 		B5C8BF322777AAFD002F86EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C8BF312777AAFD002F86EC /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B5B4D13D2778A28A00340F80 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		B5B4D13F2778A87000340F80 /* BeastCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeastCellDelegate.swift; sourceTree = "<group>"; };
 		B5C8BF2A2777AAFD002F86EC /* NajedBeastList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NajedBeastList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C8BF2D2777AAFD002F86EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5C8BF2F2777AAFD002F86EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				B5C8BF362777AAFE002F86EC /* Assets.xcassets */,
 				B5C8BF382777AAFE002F86EC /* LaunchScreen.storyboard */,
 				B5C8BF3B2777AAFE002F86EC /* Info.plist */,
+				B5B4D13D2778A28A00340F80 /* CustomCell.swift */,
+				B5B4D13F2778A87000340F80 /* BeastCellDelegate.swift */,
 			);
 			path = NajedBeastList;
 			sourceTree = "<group>";
@@ -139,7 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5C8BF322777AAFD002F86EC /* ViewController.swift in Sources */,
+				B5B4D1402778A87000340F80 /* BeastCellDelegate.swift in Sources */,
 				B5C8BF2E2777AAFD002F86EC /* AppDelegate.swift in Sources */,
+				B5B4D13E2778A28A00340F80 /* CustomCell.swift in Sources */,
 				B5C8BF302777AAFD002F86EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
